@@ -1,0 +1,32 @@
+<div style="background-color: #dee9f8; padding-bottom: 50px;">
+<div class ='centered' >Weather Forecast in {{city}}</div>
+     
+<charts [item]="city"></charts>
+
+<div class="wrapper">
+  <div class="carousel" id ="carousel">
+    <div class="content" id ="content" >
+      <div class='box' *ngFor='let weatheritem of weatherInfo'>       
+      <weatherinfobox [item]="weatheritem"></weatherinfobox>
+      </div>
+      
+    </div>
+  </div>
+  <button class="prev" id ="prev" >
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path fill="none" d="M0 0h24v24H0V0z" />
+      <path d="M15.61 7.41L14.2 6l-6 6 6 6 1.41-1.41L11.03 12l4.58-4.59z" />
+    </svg>
+  </button>
+  <button class="next" id ="next" >
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path fill="none" d="M0 0h24v24H0V0z" />
+      <path d="M10.02 6L8.61 7.41 13.19 12l-4.58 4.59L10.02 18l6-6-6-6z" />
+    </svg>
+  </button>
+</div>
+</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+  crossorigin="anonymous" />
+  
